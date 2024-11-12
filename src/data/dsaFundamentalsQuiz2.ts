@@ -158,7 +158,7 @@ end cheers;`,
     },
     {
       id: 12,
-      text: "Given the following recursive algorithm, hat is printed by the call cheers(1)?",
+      text: "Given the following recursive algorithm, what is printed by the call cheers(1)?",
       code: `cheers (times)
    if (times > 0) then
       Output ("Hip");
