@@ -15,7 +15,7 @@ import {
 // import { RadioGroup, RadioGroupItem } from "../components/ui/radio-group";
 // import { Label } from "../components/ui/label";
 import { dsaFundamentalsQuiz1 } from "../data/dsaFundamentalsQuiz1";
-import { dsaFundamentalsQuiz2 } from "../data/dsaFUndamentalsQuiz2";
+import { dsaFundamentalsQuiz2 } from "../data/dsaFundamentalsQuiz2";
 import { ChevronLeft, ChevronRight, Flame } from "lucide-react";
 import { cn } from "../lib/utils";
 

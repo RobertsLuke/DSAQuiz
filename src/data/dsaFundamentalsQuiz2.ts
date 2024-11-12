@@ -137,7 +137,14 @@ export const dsaFundamentalsQuiz2 = {
     },
     {
       id: 11,
-      text: 'Given the following recursive algorithm:\n\ncheers (times)\n   Output ("Hip");\n   if (times > 0) then\n      cheers(times - 1);\n      Output ("Hooray");\n   end if;\nend cheers;\n\nWhat is printed by the call cheers(2)?',
+      text: "Given the following recursive algorithm:",
+      code: `cheers (times)
+   Output ("Hip");
+   if (times > 0) then
+      cheers(times - 1);
+      Output ("Hooray");
+   end if;
+end cheers;`,
       options: [
         "Hip Hooray Hip Hooray Hip",
         "Hip Hip Hooray Hooray Hooray",
@@ -151,7 +158,14 @@ export const dsaFundamentalsQuiz2 = {
     },
     {
       id: 12,
-      text: 'Given the following recursive algorithm:\n\ncheers (times)\n   if (times > 0) then\n      Output ("Hip");\n      cheers(times - 1);\n   end if;\n   Output ("Hooray");\nend cheers;\n\nWhat is printed by the call cheers(1)?',
+      text: "Given the following recursive algorithm:",
+      code: `cheers (times)
+   if (times > 0) then
+      Output ("Hip");
+      cheers(times - 1);
+   end if;
+   Output ("Hooray");
+end cheers;`,
       options: [
         "Hip Hooray Hip Hooray",
         "Hip Hip Hooray Hooray",
