@@ -137,7 +137,7 @@ export const dsaFundamentalsQuiz2 = {
     },
     {
       id: 11,
-      text: "Given the following recursive algorithm:",
+      text: "Given the following recursive algorithm, what is printed by the call cheers(2)?",
       code: `cheers (times)
    Output ("Hip");
    if (times > 0) then
@@ -158,7 +158,7 @@ end cheers;`,
     },
     {
       id: 12,
-      text: "Given the following recursive algorithm:",
+      text: "Given the following recursive algorithm, hat is printed by the call cheers(1)?",
       code: `cheers (times)
    if (times > 0) then
       Output ("Hip");
