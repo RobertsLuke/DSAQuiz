@@ -162,13 +162,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         cheers(times - 1);
         Output ("Hooray");
      end if;
-  end cheers;`,options:["Hip Hooray Hip Hooray","Hooray Hip Hip Hooray","Hip Hooray Hooray Hip","Hip Hip Hooray Hooray","None of the above"],correctAnswer:"Hip Hip Hooray Hooray",explanation:"For times>0, the function prints 'Hip', makes a recursive call, then prints 'Hooray'. For cheers(2): prints Hip, calls cheers(1) which prints Hip, calls cheers(0) which does nothing, prints Hooray, returns to cheers(2) which prints Hooray."},{id:11,text:"Given the following recursive algorithm:",code:`cheers (times)
+  end cheers;`,options:["Hip Hooray Hip Hooray","Hooray Hip Hip Hooray","Hip Hooray Hooray Hip","Hip Hip Hooray Hooray","None of the above"],correctAnswer:"Hip Hip Hooray Hooray",explanation:"For times>0, the function prints 'Hip', makes a recursive call, then prints 'Hooray'. For cheers(2): prints Hip, calls cheers(1) which prints Hip, calls cheers(0) which does nothing, prints Hooray, returns to cheers(2) which prints Hooray."},{id:11,text:"Given the following recursive algorithm: What is printed by the call cheers(2)?",code:`cheers (times)
    Output ("Hip");
    if (times > 0) then
       cheers(times - 1);
       Output ("Hooray");
    end if;
-end cheers;`,options:["Hip Hooray Hip Hooray Hip","Hip Hip Hooray Hooray Hooray","Hip Hip Hip Hooray Hooray","Hip Hip Hip Hooray Hooray Hooray","None of the above"],correctAnswer:"Hip Hip Hip Hooray Hooray",explanation:"The function outputs 'Hip', then recursively calls with times-1, and outputs 'Hooray' after the recursive call returns. For cheers(2), it prints: Hip, then calls cheers(1), which prints Hip, then calls cheers(0), which does nothing, then prints Hooray, then returns to cheers(2), which prints Hooray again."},{id:12,text:"Given the following recursive algorithm:",code:`cheers (times)
+end cheers;`,options:["Hip Hooray Hip Hooray Hip","Hip Hip Hooray Hooray Hooray","Hip Hip Hip Hooray Hooray","Hip Hip Hip Hooray Hooray Hooray","None of the above"],correctAnswer:"Hip Hip Hip Hooray Hooray",explanation:"The function outputs 'Hip', then recursively calls with times-1, and outputs 'Hooray' after the recursive call returns. For cheers(2), it prints: Hip, then calls cheers(1), which prints Hip, then calls cheers(0), which does nothing, then prints Hooray, then returns to cheers(2), which prints Hooray again."},{id:12,text:"Given the following recursive algorithm: What is printed by the call cheers(1)?",code:`cheers (times)
    if (times > 0) then
       Output ("Hip");
       cheers(times - 1);
