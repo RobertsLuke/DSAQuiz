@@ -12,12 +12,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../components/ui/select";
-// import { RadioGroup, RadioGroupItem } from "../components/ui/radio-group";
-// import { Label } from "../components/ui/label";
-import { dsaFundamentalsQuiz1 } from "../data/dsaFundamentalsQuiz1";
-import { dsaFundamentalsQuiz2 } from "../data/dsaFundamentalsQuiz2";
 import { ChevronLeft, ChevronRight, Flame } from "lucide-react";
 import { cn } from "../lib/utils";
+import { processesAndScheduling } from "../data/OSI5"; // Import first quiz
+import { interprocessQuiz } from "../data/OSI6"; // Import second quiz
 
 interface Question {
   id: number;
@@ -35,7 +33,7 @@ interface Quiz {
   questions: Question[];
 }
 
-const quizzes: Quiz[] = [dsaFundamentalsQuiz1, dsaFundamentalsQuiz2];
+const quizzes: Quiz[] = [processesAndScheduling, interprocessQuiz];
 
 export default function MultipleChoiceQuiz() {
   const [selectedQuiz, setSelectedQuiz] = useState<Quiz | null>(null);
@@ -162,18 +160,27 @@ export default function MultipleChoiceQuiz() {
     <div className="container mx-auto p-4 max-w-2xl">
       <h1 className="text-3xl font-bold mb-4">Multiple Choice Quiz</h1>
 
-      <Select onValueChange={handleQuizSelect}>
-        <SelectTrigger className="w-full mb-4">
-          <SelectValue placeholder="Select a quiz" />
-        </SelectTrigger>
-        <SelectContent>
-          {quizzes.map((quiz) => (
-            <SelectItem key={quiz.id} value={quiz.id.toString()}>
-              {quiz.name}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
+      <div className="mb-4">
+        <Select
+          onValueChange={handleQuizSelect}
+          className="border border-blue-600 rounded-lg"
+        >
+          <SelectTrigger className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg shadow-md">
+            <SelectValue placeholder="Select a quiz" />
+          </SelectTrigger>
+          <SelectContent>
+            {quizzes.map((quiz) => (
+              <SelectItem
+                key={quiz.id}
+                value={quiz.id.toString()}
+                className="hover:bg-blue-100"
+              >
+                {quiz.name}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
 
       {selectedQuiz && !quizCompleted && (
         <>

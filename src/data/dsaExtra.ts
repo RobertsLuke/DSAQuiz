@@ -1,6 +1,6 @@
 export const dsaExtra = {
     id: 6,
-    name: "DSA: Sorting & Searching Identification and Complexities",
+    name: "DSA: Extra Questions",
     questions: [
       // Bubble Sort
       {
