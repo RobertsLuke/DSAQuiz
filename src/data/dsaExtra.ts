@@ -382,7 +382,7 @@ export const dsaExtra = {
   {
     id: 42,
     text: "Which Big-O notation best describes an algorithm that splits data into two equal parts and processes one part?",
-    options: ["O(log₂n)", "O(n²)", "O(1)", "O(n)"],
+    options: ["O(log₂n)", "O(n²)", "O(1)", "O(n) "],
     correctAnswer: "O(log₂n)",
     explanation:
       "O(log₂n) represents logarithmic complexity, typical in divide-and-conquer algorithms like Binary Search, where the data size is halved with each step.",
